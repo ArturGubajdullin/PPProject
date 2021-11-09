@@ -3,6 +3,7 @@ from PyQt5.QtWidgets import QLabel, QLineEdit, QComboBox
 import requests
 from bs4 import BeautifulSoup as BS
 from GameListWindow import GameListWindow
+from Parser import Parser
 
 
 class MainWindow(QWidget):
@@ -25,7 +26,7 @@ class MainWindow(QWidget):
 
         self.list_platforms = QComboBox(self)
         self.list_platforms.addItems(["PS4", "PS5",
-                                      "XBOX ONE/SX", "XBOX 360", "PC", "Nintendo Switch"])
+                                      "XBOX ONE", "XBOX Series S/X", "Nintendo Switch"])
         self.list_platforms.move(550, 30)
 
         self.button_get_games_list = QPushButton('Поиск', self)
